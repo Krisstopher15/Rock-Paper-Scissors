@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
     
@@ -31,17 +31,17 @@
         let winner = '';
         if (playerChoice === computerSelection ){
             winner = alert("It's a tie");
-        }else if (playerChoice == 'Rock' && computerSelection == 'Paper'){
+        }else if (playerChoice == 'rock' && computerSelection == 'Paper'){
             winner = alert('You Lose! Paper beats Rock');
-        }else if (playerChoice == 'Rock' && computerSelection == 'Scissors'){
+        }else if (playerChoice == 'rock' && computerSelection == 'Scissors'){
             winner = alert('You Win!');
-        }else if (playerChoice == 'Paper' && computerSelection == 'Scissors'){
+        }else if (playerChoice == 'paper' && computerSelection == 'Scissors'){
             winner = alert('You Lose! Scissors beats Paper');
-        }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
+        }else if (playerChoice == 'paper' && computerSelection == 'Rock'){
             winner = alert('You Win!');
-        }else if (playerChoice == 'Scissors' && computerSelection == 'Rock'){
+        }else if (playerChoice == 'scissors' && computerSelection == 'Rock'){
             winner = alert('You Lose! Rock beats Scissors');
-        }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
+        }else if (playerChoice == 'scissors' && computerSelection == 'Paper'){
             winner = alert('You Win!');
         }
         return winner;
@@ -49,7 +49,7 @@
 
     function game(){
         for (i = 0; i < 5; i++){
-            const playerChoice = prompt("Choice Rock, Paper or Scissors");
+            const playerChoice = prompt(`Choice Rock, Paper or Scissors\nRound ${i+1}`).toLowerCase();
             const computerSelection = getComputerChoice();
             console.log(playGame(playerChoice, computerSelection));
         }
