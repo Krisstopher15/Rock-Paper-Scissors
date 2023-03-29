@@ -10,7 +10,6 @@
     
 <script>
 
-    
     function getComputerChoice(){
         let computerSelection = '';
         let random = Math.floor(Math.random()*3);
@@ -22,6 +21,31 @@
             computerSelection = 'Scissors';
         }
     }
+    
+    function playerSelection(){
+        playerChoice = prompt("Choice Rock, Paper or Scissors");
+    }
+
+    function playGame(playerChoice, computerSelection){
+        let winner = '';
+        if (playerChoice === computerSelection ){
+            winner = "It's a tie";
+        }else if (playerChoice == 'Rock' && computerSelection == 'Paper'){
+            winner = 'You Lose';
+        }else if (playerChoice == 'Rock' && computerSelection == 'Scissors'){
+            winner = 'You Win';
+        }else if (playerChoice == 'Paper' && computerSelection == 'Scissors'){
+            winner = 'You Lose';
+        }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
+            winner = 'You Win';
+        }else if (playerChoice == 'Scissors' && computerSelection == 'Rock'){
+            winner = 'You Lose';
+        }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
+            winner = 'You Win';
+        }
+        return winner;
+    }
+
 
 </script>
 
