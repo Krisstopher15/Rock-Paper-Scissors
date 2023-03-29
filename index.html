@@ -20,32 +20,41 @@
         }else {
             computerSelection = 'Scissors';
         }
+        return computerSelection;
     }
     
     function playerSelection(){
-        playerChoice = prompt("Choice Rock, Paper or Scissors");
+        let playerChoice = prompt("Choice Rock, Paper or Scissors");
     }
 
     function playGame(playerChoice, computerSelection){
         let winner = '';
         if (playerChoice === computerSelection ){
-            winner = "It's a tie";
+            winner = alert("It's a tie");
         }else if (playerChoice == 'Rock' && computerSelection == 'Paper'){
-            winner = 'You Lose';
+            winner = alert('You Lose! Paper beats Rock');
         }else if (playerChoice == 'Rock' && computerSelection == 'Scissors'){
-            winner = 'You Win';
+            winner = alert('You Win!');
         }else if (playerChoice == 'Paper' && computerSelection == 'Scissors'){
-            winner = 'You Lose';
+            winner = alert('You Lose! Scissors beats Paper');
         }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
-            winner = 'You Win';
+            winner = alert('You Win!');
         }else if (playerChoice == 'Scissors' && computerSelection == 'Rock'){
-            winner = 'You Lose';
+            winner = alert('You Lose! Rock beats Scissors');
         }else if (playerChoice == 'Paper' && computerSelection == 'Rock'){
-            winner = 'You Win';
+            winner = alert('You Win!');
         }
         return winner;
     }
 
+    function game(){
+        for (i = 0; i < 5; i++){
+            const playerChoice = prompt("Choice Rock, Paper or Scissors");
+            const computerSelection = getComputerChoice();
+            console.log(playGame(playerChoice, computerSelection));
+        }
+    }
+    game();
 
 </script>
 
